@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            background: #2e353d;
+            position: relative;
+            overflow: hidden;
+        }
+        .page{
+            max-width: 1140px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page > p {
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+        }
+        .map {
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+
+        }
+        .col{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            color: #ffffff;
+        }
+
+        .snakeHead{
+            background: #9b0013;
+        }
+
+        .food {
+            background: #007b32;
+        }
+
+        .snakeBody{
+            background: #cccccc;
+        }
+
+        .button__left, .button__right{
+            cursor: pointer;
+            background: #007b32;
+            padding: 10px 20px;
+            margin: 0 20px;
+        }
+        .disabled{
+            background: #7c7c7c;
+        }
+
+        .heading {
+            display: none;
+            position: absolute;
+            text-align: center;
+            top: -90px;
+            left: 43%;
+            font-size: 30px;
+            color: #ffffff;
+        }
+    </style>
+    <title>Snake</title>
+</head>
+<body>
+<div class="page">
+    <div  id = "map" class="map"></div>
+    <p>Игра Snake (Управляется с помощью клавиатуры)</p>
+    <div class="button__left">Start</div>
+    <div class="button__right">New game</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
